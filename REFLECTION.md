@@ -1,0 +1,5 @@
+Most of the techniques I learned from this project were more 'styles.css' techniques to help improve the appeal of the live site and how much you can truly experiment with styles. As well collabing with what I learned from Lab 19 and expanding from with creating more dark themed colors. Creating a sidebar navigation instead of a link navigation at the top of the site is a nice adition. Even learning how to make a baseball ball from css. Finally really emphasizing spacing and margin spacing of titles, subheadings, and numbers so it is appealing and effiecent to look at. As well accessibilty is high for this application as it is fit for phone as well.
+
+AI helped me alot with JavaScript and JSON especialy creating multiple files soley dedicated to an area, like how the app moves, how charts are laid out and inputting data into those tables, and functions for the database to work properly and store in the browser with this js file focusing on the photos/video dropoff. 
+
+Though AI had an issue with baseball terms and not initally staying with a TCU themed website, so I had to go into the html file myself and fix it to the correct colors and titles. 
