@@ -6,7 +6,7 @@ built with HTML, CSS, JavaScript, and JSON. Coaches enter numbers from
 tracking apps like TrackMan and Rapsodo, grade each session, add notes,
 and attach video and photos.
 
-**Live site:** 
+**Live site:** https://vrperz007.github.io/zed/
 
 ## Features
 
