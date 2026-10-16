@@ -1,0 +1,351 @@
+{
+  "sessionTypes": [
+    {
+      "id": "bullpen",
+      "label": "Bullpen"
+    },
+    {
+      "id": "game",
+      "label": "In-Game"
+    },
+    {
+      "id": "livebp",
+      "label": "Live BP"
+    },
+    {
+      "id": "scrimmage",
+      "label": "Scrimmage"
+    }
+  ],
+  "sources": [
+    "TrackMan",
+    "Rapsodo",
+    "Yakkertech",
+    "Hawk-Eye",
+    "PitchLogic",
+    "Pocket Radar",
+    "Manual / Other"
+  ],
+  "grades": [
+    "A+",
+    "A",
+    "A-",
+    "B+",
+    "B",
+    "B-",
+    "C+",
+    "C",
+    "C-",
+    "D+",
+    "D",
+    "D-",
+    "F"
+  ],
+  "classYears": [
+    {
+      "id": "Fr",
+      "label": "Freshman"
+    },
+    {
+      "id": "So",
+      "label": "Sophomore"
+    },
+    {
+      "id": "Jr",
+      "label": "Junior"
+    },
+    {
+      "id": "Sr",
+      "label": "Senior"
+    },
+    {
+      "id": "Grad",
+      "label": "Graduate"
+    }
+  ],
+  "groups": [
+    {
+      "id": "fastball",
+      "label": "Fastball",
+      "metrics": [
+        {
+          "key": "fbMaxVelo",
+          "label": "Max Fastball Velocity",
+          "short": "Max velo",
+          "unit": "mph",
+          "step": 0.1,
+          "min": 40,
+          "max": 110,
+          "decimals": 1,
+          "better": "higher",
+          "description": "Fastest fastball of the session, from the radar or tracking unit."
+        },
+        {
+          "key": "fbAvgVelo",
+          "label": "Avg Fastball Velocity",
+          "short": "Avg velo",
+          "unit": "mph",
+          "step": 0.1,
+          "min": 40,
+          "max": 110,
+          "decimals": 1,
+          "better": "higher",
+          "description": "Average velocity across every fastball thrown in the session."
+        },
+        {
+          "key": "fbMaxSpin",
+          "label": "Max Fastball Spin Rate",
+          "short": "FB spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 500,
+          "max": 3800,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Highest fastball spin rate recorded, in revolutions per minute."
+        },
+        {
+          "key": "ivb",
+          "label": "Induced Vertical Break",
+          "short": "IVB",
+          "unit": "in",
+          "step": 0.1,
+          "min": -30,
+          "max": 30,
+          "decimals": 1,
+          "better": "higher",
+          "description": "How much the fastball rides compared with a pitch thrown with no spin, in inches. More IVB means more carry through the top of the zone."
+        }
+      ]
+    },
+    {
+      "id": "curveball",
+      "label": "Curveball",
+      "metrics": [
+        {
+          "key": "cbMaxSpin",
+          "label": "Max Curveball Spin Rate",
+          "short": "CB max spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 500,
+          "max": 4000,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Highest curveball spin rate recorded in the session."
+        },
+        {
+          "key": "cbAvgSpin",
+          "label": "Avg Curveball Spin Rate",
+          "short": "CB avg spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 500,
+          "max": 4000,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Average spin rate across all curveballs thrown."
+        }
+      ]
+    },
+    {
+      "id": "slider",
+      "label": "Slider",
+      "metrics": [
+        {
+          "key": "slMaxSpin",
+          "label": "Max Slider Spin Rate",
+          "short": "SL max spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 500,
+          "max": 4000,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Highest slider spin rate recorded in the session."
+        },
+        {
+          "key": "slAvgSpin",
+          "label": "Avg Slider Spin Rate",
+          "short": "SL avg spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 500,
+          "max": 4000,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Average spin rate across all sliders thrown."
+        }
+      ]
+    },
+    {
+      "id": "changeup",
+      "label": "Changeup",
+      "metrics": [
+        {
+          "key": "chMaxSpin",
+          "label": "Max Changeup Spin Rate",
+          "short": "CH max spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 300,
+          "max": 3500,
+          "decimals": 0,
+          "better": "lower",
+          "description": "Highest changeup spin rate recorded. Lower spin usually means more drop and fade."
+        },
+        {
+          "key": "chAvgSpin",
+          "label": "Avg Changeup Spin Rate",
+          "short": "CH avg spin",
+          "unit": "rpm",
+          "step": 1,
+          "min": 300,
+          "max": 3500,
+          "decimals": 0,
+          "better": "lower",
+          "description": "Average spin rate across all changeups thrown."
+        }
+      ]
+    },
+    {
+      "id": "advanced",
+      "label": "Advanced",
+      "metrics": [
+        {
+          "key": "bauerUnits",
+          "label": "Bauer Units",
+          "short": "Bauer units",
+          "unit": "BU",
+          "step": 0.1,
+          "min": 5,
+          "max": 45,
+          "decimals": 1,
+          "better": "higher",
+          "description": "Fastball spin rate divided by velocity (RPM ÷ MPH). Lets you compare spin between pitchers who throw at different speeds. Most fastballs land between 22 and 28."
+        },
+        {
+          "key": "movementScore",
+          "label": "Advanced Movement Score",
+          "short": "Movement score",
+          "unit": "",
+          "step": 0.1,
+          "min": 0,
+          "max": 200,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Overall movement score from your tracking app. Enter it on the same scale the app uses (for example, 100 = average)."
+        },
+        {
+          "key": "tilt",
+          "label": "Measured Tilt",
+          "short": "Tilt",
+          "type": "tilt",
+          "unit": "",
+          "placeholder": "1:15",
+          "description": "Spin axis shown as a clock face, measured from ball flight. 12:00 is pure backspin. Right-handed four-seamers usually sit near 12:30 to 1:30; lefties near 10:30 to 11:30."
+        },
+        {
+          "key": "efficiency",
+          "label": "Spin Efficiency",
+          "short": "Efficiency",
+          "unit": "%",
+          "step": 0.1,
+          "min": 0,
+          "max": 100,
+          "decimals": 0,
+          "better": "higher",
+          "description": "Share of total spin that creates movement (transverse spin). 100% means the pitch has no gyro spin."
+        },
+        {
+          "key": "gyroAngle",
+          "label": "Gyro Angle",
+          "short": "Gyro",
+          "unit": "°",
+          "step": 0.1,
+          "min": 0,
+          "max": 90,
+          "decimals": 0,
+          "better": "neutral",
+          "description": "Angle between the spin axis and the direction of flight. 0° is pure backspin or topspin; 90° is pure bullet spin. The right number depends on the pitch."
+        }
+      ]
+    }
+  ],
+  "charts": [
+    {
+      "id": "fbVelo",
+      "label": "Fastball velocity",
+      "metrics": [
+        "fbMaxVelo",
+        "fbAvgVelo"
+      ]
+    },
+    {
+      "id": "fbSpin",
+      "label": "Fastball spin rate",
+      "metrics": [
+        "fbMaxSpin"
+      ]
+    },
+    {
+      "id": "ivb",
+      "label": "Induced vertical break",
+      "metrics": [
+        "ivb"
+      ]
+    },
+    {
+      "id": "cbSpin",
+      "label": "Curveball spin rate",
+      "metrics": [
+        "cbMaxSpin",
+        "cbAvgSpin"
+      ]
+    },
+    {
+      "id": "slSpin",
+      "label": "Slider spin rate",
+      "metrics": [
+        "slMaxSpin",
+        "slAvgSpin"
+      ]
+    },
+    {
+      "id": "chSpin",
+      "label": "Changeup spin rate",
+      "metrics": [
+        "chMaxSpin",
+        "chAvgSpin"
+      ]
+    },
+    {
+      "id": "bauer",
+      "label": "Bauer units",
+      "metrics": [
+        "bauerUnits"
+      ]
+    },
+    {
+      "id": "move",
+      "label": "Movement score",
+      "metrics": [
+        "movementScore"
+      ]
+    },
+    {
+      "id": "eff",
+      "label": "Spin efficiency",
+      "metrics": [
+        "efficiency"
+      ]
+    },
+    {
+      "id": "gyro",
+      "label": "Gyro angle",
+      "metrics": [
+        "gyroAngle"
+      ]
+    }
+  ]
+}

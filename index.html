@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mound Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Track pitcher metrics, grades, notes, video and photos from bullpen to game.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="Main">
+    <a class="brand" href="#" data-nav="roster" aria-label="Mound Report home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="14" class="ball"/>
+        <path d="M8.5 5.6c3.4 2.8 5.1 6.3 5.1 10.4s-1.7 7.6-5.1 10.4" class="seam"/>
+        <path d="M23.5 5.6c-3.4 2.8-5.1 6.3-5.1 10.4s1.7 7.6 5.1 10.4" class="seam"/>
+      </svg>
+      <span class="brand-text"><strong>Mound Report</strong><small>Pitching development</small></span>
+    </a>
+    <nav class="nav">
+      <button class="nav-item" data-nav="roster">
+        <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="7" r="2.6"/><circle cx="14" cy="8" r="2.1"/><path d="M2.5 16c.6-2.8 2.3-4.2 4.5-4.2s3.9 1.4 4.5 4.2M12 12.2c2.2-.3 4.6.6 5.4 3.6"/></svg>
+        <span>Staff</span>
+      </button>
+      <button class="nav-item" data-nav="sessions">
+        <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><rect x="3.5" y="4" width="13" height="13" rx="2"/><path d="M3.5 8h13M7 2.5v3M13 2.5v3M7 11.5h2M7 14h5"/></svg>
+        <span>Session Log</span>
+      </button>
+      <button class="nav-item" data-nav="data">
+        <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16V9M8 16V5M12 16v-5M16 16V3"/></svg>
+        <span>Data &amp; Metrics</span>
+      </button>
+    </nav>
+    <button class="btn btn-primary nav-cta" data-action="new-session">
+      <svg class="i" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
+      <span>Log Session</span>
+    </button>
+    <p class="sidebar-foot" id="storage-status">Loading…</p>
+  </aside>
+
+  <main id="main" class="main" tabindex="-1">
+    <div class="loading">Loading your staff…</div>
+  </main>
+</div>
+
+<div id="modal-root"></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="js/db.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
